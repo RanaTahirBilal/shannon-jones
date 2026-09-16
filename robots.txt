@@ -1,0 +1,5 @@
+# While the site lives on ranatahirbilal.github.io it is kept out of search engines.
+# When it moves to Mr. Jones's own domain, change the line below to "Allow: /"
+# and delete the robots meta line in index.html and 404.html.
+User-agent: *
+Disallow: /
