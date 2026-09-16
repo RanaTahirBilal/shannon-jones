@@ -1,0 +1,226 @@
+/* =====================================================================
+   Shannon W. Jones III site. Loaded after the MegaOne hospital demo stylesheet.
+   Prefix: sj-
+   Every override of a demo rule says why.
+   ===================================================================== */
+
+:root{
+  --sj-ink:#14232A;        /* 16.11 on white, 14.77 on mist */
+  --sj-muted:#4B5B61;      /*  7.07 on white,  6.49 on mist */
+  --sj-paper:#FFFFFF;
+  --sj-mist:#F1F6F6;
+  --sj-dark:#0F2A30;       /* band, strip and footer ground */
+  --sj-acc:#1A7F86;        /* rules and icons only; 4.75 on white */
+  --sj-acc-ink:#115E65;    /*  7.47 on white, 6.84 on mist; small text and button ground */
+  --sj-acc-lift:#8ADAD5;   /*  9.37 on dark, small text on dark */
+  --sj-gold-lift:#E8C27A;  /*  8.91 on dark */
+  --sj-on-dark:#E6EEEE;    /* 12.79 on dark */
+  --sj-sans:'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  --sj-head:'Raleway', 'Helvetica Neue', Arial, sans-serif;
+  --sj-quote:'Lora', Georgia, serif;
+}
+
+body{font-family:var(--sj-sans);font-size:17px;line-height:1.65;color:var(--sj-ink);background:var(--sj-paper);}
+a{color:var(--sj-acc-ink);}
+a:hover,a:focus{color:var(--sj-ink);}
+.sj-sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
+.sj-body{font-size:16px;line-height:1.7;color:var(--sj-ink);margin-bottom:1.4rem;}
+
+/* Loader colours were the demo cyan */
+.loader{background:var(--sj-mist);}
+.indicator svg polyline#back{stroke:rgba(26,127,134,.25);}
+.indicator svg polyline#front{stroke:var(--sj-acc);}
+
+/* ---------- Header ----------
+   Demo header is absolute over the hero with a cyan gradient top bar.
+   Here it sits in normal flow: a thin dark bar, then a white bar. */
+header{position:relative;background:var(--sj-dark);}
+.upper-nav{padding:10px 0;}
+.upper-nav .top-text{margin:0;font-size:14px;color:var(--sj-on-dark);}
+.upper-nav .top-detail{margin:0;padding:0;list-style:none;}
+.upper-nav .top-detail li{display:flex;align-items:center;gap:8px;color:var(--sj-on-dark);font-size:14px;}
+.upper-nav .top-detail li span i{color:var(--sj-acc-lift);font-size:18px;}
+.sj-top-place{color:var(--sj-on-dark);}
+.sj-wordmark{font-family:var(--sj-head);font-weight:700;font-size:1.25rem;color:var(--sj-ink)!important;text-decoration:none!important;letter-spacing:.2px;}
+.sj-wordmark-light{color:var(--sj-on-dark)!important;}
+/* Demo centred the brand absolutely between two nav groups */
+.lower-nav .navbar-brand,.lower-nav-style4 .navbar-brand{position:static;transform:none;left:auto;}
+.lower-nav .navbar{padding-top:18px;padding-bottom:18px;}
+.lower-nav .navbar-nav .nav-link,.lower-nav-style4 .navbar-nav .nav-link{color:var(--sj-ink);font-family:var(--sj-sans);font-weight:700;font-size:14px;letter-spacing:.4px;}
+.lower-nav-style4 .navbar-light .navbar-nav .nav-link:hover,.header-style4 .lower-nav-style4 .navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus,.navbar-light .navbar-nav .nav-link:hover,.navbar-light .navbar-nav .nav-link.active{color:var(--sj-acc-ink)!important;}
+.lower-nav .navbar-nav .nav-item{margin-right:26px;}
+.fix-top .navbar-nav .nav-link{color:var(--sj-ink);}
+/* Demo fixed-top animation slides the bar in; keep it but without the demo shadow colour */
+.fix-top{box-shadow:0 2px 10px -2px rgba(15,42,48,.25);}
+.upper-nav .toggle-btn span{background-color:var(--sj-on-dark);}
+header .upper-nav.fixed-top{background:var(--sj-dark);}
+header .upper-nav.fixed-top .toggle-btn span{background-color:var(--sj-on-dark);}
+
+/* Full-screen menu */
+header .broad-nav{background:var(--sj-dark);}
+header .broad-nav .navbar .nav-item .nav-link{color:var(--sj-on-dark);font-family:var(--sj-head);font-size:20px;font-weight:600;}
+header .broad-nav .navbar .nav-link:focus,header .broad-nav .navbar .nav-link:hover,header .broad-nav .navbar .nav-link.active{color:var(--sj-acc-lift);}
+header .broad-nav .navbar .nav-link.active:before{background-color:var(--sj-acc-lift);}
+header .broad-nav .close-nav i{color:var(--sj-on-dark);}
+
+/* ---------- Hero ----------
+   Demo: cyan gradient, 100vh, portrait card left, synced carousels.
+   Here: the 16:9 photograph with a pale wash over the quiet left half. */
+.slider-area.sj-hero{
+  display:block;height:auto;min-height:calc(100vh - 120px);padding:12vh 0 0;
+  background-color:#F4EFE8;
+  background-image:
+    linear-gradient(90deg,rgba(247,243,238,.95) 0%,rgba(247,243,238,.88) 38%,rgba(247,243,238,0) 58%),
+    url("../img/hero.jpg");
+  background-size:cover;background-position:right center;background-repeat:no-repeat;
+}
+.sj-hero-box{padding-bottom:10vh;}
+.sj-eyebrow{font-weight:700;font-size:14px;letter-spacing:1.6px;text-transform:uppercase;color:var(--sj-acc-ink);margin:0 0 1rem;}
+.area-heading h1.sj-hero-name{font-family:var(--sj-head);font-weight:700;font-size:3.6rem;line-height:1.08;color:var(--sj-ink);margin:0 0 1.2rem;}
+.sj-postnom{display:block;font-size:1.3rem;font-weight:600;letter-spacing:2px;color:var(--sj-muted);margin-top:.6rem;font-family:var(--sj-sans);}
+.area-heading p.sj-hero-lede{font-size:1.15rem;line-height:1.65;color:var(--sj-ink);max-width:32rem;margin:0 0 2rem;}
+
+/* The demo's strip of three was absolutely positioned over the slider in white text.
+   It becomes a solid band under the photograph so its text is always readable. */
+.author-skills.sj-strip{position:static;background:var(--sj-dark);}
+.sj-strip .about-margin{border-top:0;}
+.sj-strip .about-media{padding:26px 8px;}
+.sj-strip .about-media::before{display:none;}
+.author-skills.sj-strip .small-heading{font-family:var(--sj-head);font-size:20px;color:var(--sj-gold-lift);margin:0 0 6px;}
+.author-skills.sj-strip .small-text{font-family:var(--sj-sans);font-size:15px;color:var(--sj-on-dark);margin:0;}
+
+/* Buttons */
+.btn{text-transform:none;font-family:var(--sj-sans);font-weight:700;letter-spacing:.3px;}
+.sj-btn{background:var(--sj-acc-ink);border:2px solid var(--sj-acc-ink);color:#fff!important;margin:0 .5rem .6rem 0;padding:10px 28px;}
+.sj-btn:hover,.sj-btn:focus{background:var(--sj-ink)!important;border-color:var(--sj-ink);color:#fff!important;}
+.sj-btn-line{background:transparent;border:2px solid var(--sj-ink);color:var(--sj-ink)!important;margin:0 .5rem .6rem 0;padding:10px 28px;}
+.sj-btn-line:hover,.sj-btn-line:focus{background:var(--sj-ink)!important;color:#fff!important;}
+button.sj-btn{cursor:pointer;}
+
+/* ---------- Headings ---------- */
+section{padding:6rem 0;}
+.heading-area .heading{font-family:var(--sj-head);font-size:16px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--sj-acc-ink);margin:0 0 20px;}
+.heading-area span,.heading-area .heading span{font-family:var(--sj-head);font-size:2.5rem;font-weight:700;letter-spacing:0;text-transform:none;color:var(--sj-ink);line-height:1.15;margin-top:10px;}
+.heading-area .text{font-size:17px;line-height:1.7;color:var(--sj-ink);}
+
+/* ---------- Work ---------- */
+.about-sec .about-media{cursor:default;}
+.about-sec .about-media .about-icon i{color:var(--sj-acc);}
+.about-sec .about-media .ex-line{background:var(--sj-acc);margin-left:auto;margin-right:auto;}
+.about-sec .about-media:hover .ex-line{margin-left:auto;}
+.about-sec .small-heading{font-family:var(--sj-head);font-size:21px;color:var(--sj-ink);margin:.4rem 0 .6rem;}
+.about-sec .small-text{font-size:16px;line-height:1.6;color:var(--sj-ink);}
+/* demo hover background slid a white sheet over the card */
+.about-sec .about-media::before{display:none;}
+
+/* ---------- Roots band ---------- */
+.sj-roots{background:var(--sj-dark);padding:4.5rem 0;}
+.sj-roots-kicker{font-weight:700;font-size:14px;letter-spacing:1.6px;text-transform:uppercase;color:var(--sj-acc-lift);margin:0 0 .6rem;}
+.sj-roots-title{font-family:var(--sj-head);font-weight:700;font-size:1.8rem;line-height:1.25;color:#fff;margin:0 0 1.5rem;}
+.sj-roots-text{font-family:var(--sj-quote);font-size:1.25rem;line-height:1.7;color:var(--sj-on-dark);margin:0;}
+
+/* ---------- Career ---------- */
+.team-sec{background:var(--sj-mist);}
+.sj-photos{position:relative;margin:1rem 0 3rem;padding-bottom:18%;}
+.sj-photos img{display:block;height:auto;box-shadow:0 12px 30px -12px rgba(15,42,48,.35);}
+.sj-photo-a{width:78%;}
+.sj-photo-b{width:50%;position:absolute;right:0;bottom:0;border:6px solid var(--sj-mist);}
+.sj-list-head{font-family:var(--sj-head);font-weight:700;font-size:1.3rem;color:var(--sj-ink);margin:0 0 .8rem;}
+.sj-list-head ~ .sj-list-head{margin-top:2.2rem;}
+.sj-timeline{list-style:none;margin:0;padding:0;border-top:1px solid rgba(20,35,42,.15);text-align:left;}
+.sj-timeline li{display:flex;gap:1.2rem;padding:.75rem 0;border-bottom:1px solid rgba(20,35,42,.15);}
+.sj-when{flex:0 0 8.2rem;font-weight:700;font-size:15px;color:var(--sj-acc-ink);}
+.sj-what{flex:1;font-size:16px;line-height:1.55;color:var(--sj-ink);}
+@media (max-width:575px){ .sj-timeline li{flex-direction:column;gap:.1rem;} .sj-when{flex:none;} }
+
+/* ---------- Gallery ----------
+   Demo used isotope with absolute positioning and a hover overlay. A plain grid is used instead. */
+.sj-gallery{background:var(--sj-paper);}
+.sj-grid.da-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:0;margin:2rem 0 0;}
+.sj-grid.da-thumbs li{position:static;width:auto;margin:0;transform:none;box-shadow:none;}
+.sj-grid img{display:block;width:100%;height:auto;transition:transform .5s ease;}
+.sj-grid a{display:block;overflow:hidden;}
+.sj-grid a:hover img,.sj-grid a:focus img{transform:scale(1.04);}
+.sj-disclosure{max-width:46rem;margin:2rem auto 0;text-align:center;font-size:15px;color:var(--sj-muted);}
+@media (max-width:991px){ .sj-grid.da-thumbs{grid-template-columns:repeat(2,1fr);} .sj-grid.da-thumbs li{position:static!important;width:auto!important;transform:none!important;} }
+
+/* ---------- In his words ---------- */
+.mini-blog-sec{background:var(--sj-mist);}
+.mini-blog-sec .card-blog{margin-bottom:24px;}
+.mini-blog-sec .card-blog .mini-blog.sj-quote{margin:0;height:100%;padding:28px 26px;background:#fff;border-top:3px solid var(--sj-acc);}
+.mini-blog-sec .card-blog .mini-blog.sj-quote:hover{background:#fff;box-shadow:0 10px 24px -14px rgba(15,42,48,.4);}
+.mini-blog-sec .sj-quote .mini-blog-title{font-family:var(--sj-quote);font-style:italic;font-size:1.2rem;line-height:1.55;color:var(--sj-ink);margin:0 0 1rem;}
+.mini-blog-sec .mini-blog.sj-quote:hover .mini-blog-title,.mini-blog-sec .mini-blog.sj-quote:hover .small-text{color:inherit;}
+.mini-blog-sec .sj-quote .small-text{font-size:15px;font-weight:600;color:var(--sj-acc-ink);margin:0;}
+.mini-blog-sec .mini-blog.sj-quote:hover .small-text{color:var(--sj-acc-ink);}
+.mini-blog-sec .mini-blog.sj-quote:hover .mini-blog-title{color:var(--sj-ink);}
+
+/* ---------- Contact ---------- */
+.contact-sec{background:var(--sj-paper);}
+.gradient_rectangle{background:var(--sj-acc);}
+.contact-sec .contact-form .form-control{color:var(--sj-ink);font-size:16px;border-bottom:1px solid #7C8B90;margin-bottom:18px;}
+.contact-sec .contact-form input::placeholder,.contact-sec .contact-form textarea::placeholder{color:#55656B;font-size:15px;opacity:1;}
+.contact-sec .contact-form .form-control:focus{border-bottom-color:var(--sj-acc-ink);}
+.contact-sec .heading-area{margin-bottom:1.2rem;}
+
+/* ---------- Footer ---------- */
+.footer.sj-footer{background:var(--sj-dark);}
+.sj-foot-item{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 0 1rem;color:var(--sj-on-dark);font-size:16px;}
+.sj-foot-item i{font-size:26px;color:var(--sj-acc-lift);}
+.sj-foot-item a{color:var(--sj-acc-lift);}
+.sj-foot-item a:hover,.sj-foot-item a:focus{color:#fff;}
+.sj-copy{margin:1rem 0 0;font-size:14px;color:var(--sj-on-dark);}
+
+/* ---------- Narrow screens ---------- */
+@media (max-width:991px){
+  /* Headline on a cover-cropped photo would land on his face; show the photo as a block */
+  .slider-area.sj-hero{background-image:none;padding:0;min-height:0;}
+  .slider-area.sj-hero:before{content:"";display:block;height:56vw;max-height:520px;background:url("../img/hero.jpg") 80% center/cover no-repeat;margin-bottom:2rem;}
+  .sj-hero-box{padding-bottom:3rem;text-align:left;}
+  .area-heading h1.sj-hero-name{font-size:2.5rem;}
+  .heading-area span,.heading-area .heading span{font-size:2rem;}
+  header .broad-nav{left:0;}
+}
+@media (max-width:767px){
+  /* demo centres every line on phones */
+  body{text-align:left;}
+  .upper-nav{background:var(--sj-dark);height:auto;padding:16px 0;}
+  .upper-nav .toggle-btn{transform:none;position:absolute;right:15px;top:50%;margin-top:-10px;}
+  .navbar-brand.nav-logo{position:static;}
+  .heading-area .heading{font-size:14px;}
+  section{padding:4.5rem 0;}
+  p{font-size:inherit;}
+  .sj-roots-title{font-size:1.5rem;}
+  .mini-blog-sec .card-blog{margin-top:0;}
+}
+
+/* ---------- Fixes after the first render check ---------- */
+/* demo sets .team-sec img{height:100%}, which stretched the overlapping photo */
+.team-sec .sj-photos img{height:auto;}
+/* the hero ground showed a sliver of photo under the strip */
+.slider-area.sj-hero{padding-bottom:0;}
+.sj-strip .row{margin-bottom:0;}
+/* demo blockquote rule drew a dark bar beside each quote */
+.sj-quote blockquote{border:0;padding:0;}
+/* demo footer link colour #2d2d2d on the dark footer */
+.footer.sj-footer .our-loc a,.footer.sj-footer .sj-foot-item a{color:var(--sj-acc-lift);display:inline;margin:0;font-family:var(--sj-sans);font-size:16px;}
+.footer.sj-footer .our-loc a:hover,.footer.sj-footer .our-loc a:focus{color:#fff;}
+/* .team-sec img{width:100%} outranked the photo widths */
+.team-sec .sj-photos .sj-photo-a{width:78%;}
+.team-sec .sj-photos .sj-photo-b{width:50%;}
+/* min-height left a band of photo under the strip; pin the strip to the bottom instead */
+.slider-area.sj-hero{display:flex;flex-direction:column;justify-content:space-between;}
+.slider-area.sj-hero > .container{width:100%;}
+@media (min-width:992px) and (max-width:1299px){
+  .area-heading h1.sj-hero-name{font-size:3rem;}
+  .slider-area.sj-hero{background-image:linear-gradient(90deg,rgba(247,243,238,.96) 0%,rgba(247,243,238,.9) 40%,rgba(247,243,238,0) 52%),url("../img/hero.jpg");}
+}
+@media (max-width:991px){ .slider-area.sj-hero{display:block;} }
+/* Sticky header in place of the demo's scroll-triggered fixed bar (which shifted the layout).
+   On wide screens the thin top bar scrolls away and the white bar sticks. */
+header{position:sticky;top:-44px;z-index:1000;}
+@media (max-width:991px){ header{top:0;} }
+/* the full-screen menu is a navbar-light too; keep its links light on the dark ground */
+header .broad-nav .navbar-light .navbar-nav .nav-link,header .broad-nav .navbar .nav-item .nav-link{color:var(--sj-on-dark)!important;}
+header .broad-nav .navbar-light .navbar-nav .nav-link.active,header .broad-nav .navbar-light .navbar-nav .nav-link:hover,header .broad-nav .navbar-light .navbar-nav .nav-link:focus{color:var(--sj-acc-lift)!important;}
